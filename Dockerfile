@@ -3,6 +3,7 @@ FROM gradle:8.11.1-jdk17 AS build
 WORKDIR /myapp
 
 # 🔥 Gradle 캐시 최적화: Gradle 종속성을 먼저 복사하여 캐싱 활용
+
 COPY gradle /myapp/gradle
 COPY gradlew /myapp/
 COPY build.gradle settings.gradle /myapp/
