@@ -16,6 +16,6 @@ public class TestController {
     @GetMapping("/test")
     public String test(HttpServletRequest request) {
         log.info("port:{}",request.getServerPort());
-        return "product service test~~~~~~~^^99!!!$!!!!~~~2222dddd";
+        return "product service test~~~~~~~^^99!!!$!!!!~~~2222dddd```";
     }
 }
