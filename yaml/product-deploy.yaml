@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product
+  labels:
+    service: product
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      service: product
+  template:
+    metadata:
+      labels:
+        service: product
+    spec:
+      containers:
+        - name: product
+          image: heaves/product-service-single:v1.0.56
+          ports:
+            - containerPort: 9301
